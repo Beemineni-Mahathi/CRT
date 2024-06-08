@@ -1,0 +1,15 @@
+CREATE TABLE `assessmentresult` (
+  `ResultID` int NOT NULL,
+  `StudentID` int DEFAULT NULL,
+  `AssessmentID` int DEFAULT NULL,
+  `Score` int DEFAULT NULL,
+  `Grade` varchar(45) DEFAULT NULL,
+  `DateTaken` date DEFAULT NULL,
+  `Comments` varchar(45) DEFAULT NULL,
+  `Status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ResultID`),
+  KEY `AssessmentID_idx` (`AssessmentID`),
+  KEY `StudentID_idx` (`StudentID`),
+  CONSTRAINT `AssessmentID` FOREIGN KEY (`AssessmentID`) REFERENCES `assessmentdetails` (`AssessmentID`),
+  CONSTRAINT `StudentID` FOREIGN KEY (`StudentID`) REFERENCES `student_details` (`StudentID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
