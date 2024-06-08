@@ -1,0 +1,10 @@
+CREATE TABLE `assessmentdetails` (
+  `AssessmentID` int NOT NULL,
+  `AssessmentName` varchar(45) DEFAULT NULL,
+  `TotalMarks` int DEFAULT NULL,
+  `PassingMarks` int DEFAULT NULL,
+  `DateCreated` date DEFAULT NULL,
+  `DateScheduled` date DEFAULT NULL,
+  `Duration` time DEFAULT NULL,
+  PRIMARY KEY (`AssessmentID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
