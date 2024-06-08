@@ -1,0 +1,14 @@
+CREATE TABLE `student_details` (
+  `StudentID` int NOT NULL,
+  `Name` varchar(45) DEFAULT NULL,
+  `RollNo` varchar(45) DEFAULT NULL,
+  `DateOfBirth` date DEFAULT NULL,
+  `Gender` varchar(45) DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  `Phone` varchar(45) DEFAULT NULL,
+  `Address` varchar(45) DEFAULT NULL,
+  `DateOfJoining` date DEFAULT NULL,
+  `Status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`StudentID`),
+  UNIQUE KEY `RollNo_UNIQUE` (`RollNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
